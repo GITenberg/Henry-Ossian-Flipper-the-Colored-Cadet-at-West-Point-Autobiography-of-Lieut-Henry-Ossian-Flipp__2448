@@ -1,0 +1,33 @@
+_repo: Henry-Ossian-Flipper-the-Colored-Cadet-at-West-Point-Autobiography-of-Lieut-Henry-Ossian-Flipp__2448
+creator:
+  author:
+    agent_name: Flipper, Henry Ossian
+    alias: Flipper, Henry O. (Henry Ossian)
+    birthdate: 1856
+    deathdate: 1940
+    gutenberg_agent_id: '914'
+    url: http://www.gutenberg.org/2009/agents/914
+    wikipedia: http://en.wikipedia.org/wiki/Henry_Ossian_Flipper
+description: 'Autobiography of Lieut. Henry Ossian Flipper, U.S.A., First graduate
+  of color from the U.S. Military Academy ; To: The faculty of Atlanta University,
+  Atlanta, Ga.'
+gutenberg_issued: '2000-12-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '2448'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Soldiers -- United States -- Biography'
+- !lcsh 'Flipper, Henry Ossian, 1856-1940'
+- !lcsh 'United States Military Academy'
+- !lcsh 'Military cadets -- United States -- Biography'
+- !lcc 'U'
+- !lcsh 'African American military cadets -- New York (State) -- West Point -- Biography'
+- !lcsh 'African American soldiers -- Biography'
+title: "Henry Ossian Flipper, the Colored Cadet at West Point\r\nAutobiography of\
+  \ Lieut. Henry Ossian Flipper, U.S.A., First Graduate of Color from the U.S. Military\
+  \ Academy"
+url: http://www.gutenberg.org/ebooks/2448
