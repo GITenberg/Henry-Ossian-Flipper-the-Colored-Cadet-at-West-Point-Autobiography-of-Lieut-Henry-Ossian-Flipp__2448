@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: Zt7fXMzocW2c5rU9QDU8Lk29SBnFUb8IvRWmokXTllGVI2K4CaB6/lOKtoFIFfSkbJnbUYCufZj6/piuTcTZmeUChF1BpqB2PWssMrWdXBbY4qjbPmGtbQTZ7I8OITX3HcxKAViFlfRkzchE0JZ3Oyuuajk/KniM9XRnLe176k6raR0Hv9JmHSrd3EZKSOyJLy/G7KBcX4KfUu0+Iz1T43V6+HMMIAu45lmC2KigWOgB4liOGGTcPRx0LXO5aCFwJx/qWLFIIDmLPRsV/3G5pQ189p8Oh7b/H281FPxrVlOjSf8l7MLApr8eYGISiiqKS448Q2TgmVspL2WALhSJ90pw6nj85hS57xO+Ppfvg1gTBzAfeZKhZzoBIEXeggmPhhWfF5Vyie2sdA6XLMQqp8D83gotxr+WePT2y17YMYJXr2bkRpiNSzCFPjRbOMDhxh/Jpt6m193uBv27ZrKF0AqZ2ONBWmrG3kH53kkCPfLUbkkZ7Zop2B2beb1MHOFYRaxI2qmg4hmxtsFqLFhf4h5wqU4NSr3335p3vYX+BZuCgR/9CLhW+ETQpb69y3bgSrYgpKSeuO97GOkhs+P/KRGiF9wZGyxnKnUNjr7uuHGG8g9QMbqOdeHOP4hzdEN0MAJgXZb9IVR3JktDW4guhdEM1qLoxBDk+sUmyeoaqkw=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/Henry-Ossian-Flipper-the-Colored-Cadet-at-West-Point-Autobiography-of-Lieut-Henry-Ossian-Flipp__2448
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
