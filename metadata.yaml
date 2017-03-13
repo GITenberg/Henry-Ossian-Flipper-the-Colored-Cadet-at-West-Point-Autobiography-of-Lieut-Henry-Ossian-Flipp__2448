@@ -1,5 +1,8 @@
 _repo: Henry-Ossian-Flipper-the-Colored-Cadet-at-West-Point-Autobiography-of-Lieut-Henry-Ossian-Flipp__2448
-_version: 0.1.0
+_version: 0.2.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   author:
     agent_name: Flipper, Henry Ossian
@@ -12,6 +15,8 @@ creator:
 description: 'Autobiography of Lieut. Henry Ossian Flipper, U.S.A., First graduate
   of color from the U.S. Military Academy ; To: The faculty of Atlanta University,
   Atlanta, Ga.'
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/2448#Henry-Ossian-Flipper-the-Colored-Cadet-at-West-Point-Autobiography-of-Lieut-Henry-Ossian-Flipp_
 gutenberg_issued: '2000-12-01'
 gutenberg_type: Text
 identifiers:
