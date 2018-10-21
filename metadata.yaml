@@ -1,5 +1,5 @@
 _repo: Henry-Ossian-Flipper-the-Colored-Cadet-at-West-Point-Autobiography-of-Lieut-Henry-Ossian-Flipp__2448
-_version: 0.2.0
+_version: 0.2.1
 covers:
 - cover_type: generated
   image_path: cover.png
@@ -33,6 +33,7 @@ subjects:
 - !lcc 'U'
 - !lcsh 'African American military cadets -- New York (State) -- West Point -- Biography'
 - !lcsh 'African American soldiers -- Biography'
+- GITenberg
 title: "Henry Ossian Flipper, the Colored Cadet at West Point\r\nAutobiography of\
   \ Lieut. Henry Ossian Flipper, U.S.A., First Graduate of Color from the U.S. Military\
   \ Academy"
